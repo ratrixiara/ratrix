@@ -1,5 +1,5 @@
 //screen size
-const SCREEEN_W = 1920;
+const SCREEN_W = 1920;
 const SCREEN_H = 1080;
 
 //screen center
