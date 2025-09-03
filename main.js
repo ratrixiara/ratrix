@@ -72,14 +72,14 @@ class PauseScene extends Phaser.Scene
 {
   constructor(){
     super({key: 'ScenePause'});
-
-    create(){
-      this.input.keyboard.on('keydown-P', function(){
-        this.scene.resume('SceneMain');
-        this.scene.stop();
-      }, this)
-    }
   }
+  create(){
+    this.input.keyboard.on('keydown-P', function(){
+      this.scene.resume('SceneMain');
+      this.scene.stop();
+    }, this)
+  }
+  
 }
 
 // Init Phaser Stuff
