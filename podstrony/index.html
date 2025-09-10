@@ -1,1 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>funkcje js</title>
+</head>
+<body>
 
+  <h1 id="naglowek">naglowek</h1>
+  <p id="tekst">tekst</p>
+  <button onclick="funkcja()">przycisk</button>
+
+  <script>
+    
+    console.log("konsolkaaaaaaaaaaaaa");
+    document.write("tekst wstawiony przez documentwrite<br>");
+    window.alert("alert");
+    
+    function funkcja() {
+      const naglowek = document.getElementById("naglowek");
+      const tekst = document.getElementById("tekst");
+
+      naglowek.innerHTML = "zmieniony <u>nagłówek</u>!";
+      tekst.innerText = "zmieniony tekst przez innerText.";
+
+      console.log("klikniety przycisk");
+    }
+  </script>
+
+</body>
+</html>
