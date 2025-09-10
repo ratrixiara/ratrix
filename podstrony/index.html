@@ -10,6 +10,8 @@
   <button onclick="funkcja()">przycisk</button>
 
   <script>
+     document.write("<br>tekst wstawiony przez documentwrite<br>");
+
     
     console.log("konsolkaaaaaaaaaaaaa");
     window.alert("alert");
@@ -18,7 +20,7 @@
       const naglowek = document.getElementById("naglowek");
       const tekst = document.getElementById("tekst");
 
-      document.write("tekst wstawiony przez documentwrite<br>");
+      
       naglowek.innerHTML = "zmieniony <u>naglowek</u>";
       tekst.innerText = "zmieniony tekst przez innertext.";
       
