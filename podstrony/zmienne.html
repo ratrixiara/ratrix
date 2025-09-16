@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <title>zmienne</title>
+</head>
+<body>
+  <h1>typy zmiennych i konwersje w JS</h1>
+
+  <p>sprawdź konsole, aby zobaczyć działanie kodu.</p>
+
+  <script>
+   
+    var zmiennaVar = "to jest var";      // można nadpisać i redeklarować
+    let zmiennaLet = 42;                 // można nadpisać, ale nie redeklarować w tym samym bloku
+    const zmiennaConst = true;           // nie można nadpisać
+
+    console.log("var:", zmiennaVar);
+    console.log("let:", zmiennaLet);
+    console.log("const:", zmiennaConst);
+
+    
+
+
+
+
+    let tekst = "123";                
+    let liczba = 123;                 
+    let prawda = true;               
+    let nic = null;                   
+    let niezdefiniowane;             
+    let obiekt = { imie: "dave", wiek: 19 };
+    let tablica = [1, 2, 3, 4];
+
+    console.log("tekst:", tekst, typeof tekst);
+    console.log("liczba:", liczba, typeof liczba);
+    console.log("boolean:", prawda, typeof prawda);
+    console.log("null:", nic, typeof nic);  
+    console.log("undefined:", niezdefiniowane, typeof niezdefiniowane);
+    console.log("obiekt:", obiekt, typeof obiekt);
+    console.log("tablica:", tablica, typeof tablica);
+
+   
+
+
+    
+    let stringLiczba = "456";
+    let ToNum = Number(stringLiczba);
+    console.log("string na liczbe:", toNum, typeof toNum);
+
+   
+    let ToString = liczba.toString();
+    console.log("numer na string:", ToString, typeof ToString);
+
+ 
+    let BoolStr = prawda.toString();
+    console.log("bool na string:", BoolStr, typeof BoolStr);
+
+    let StrBool = Boolean("cześ"); 
+    console.log("string na bool:", StrBool, typeof StrBool);
+
+    let bool0 = Boolean(0);  
+    let bool1 = Boolean(1); 
+    console.log("0 na bool:", bool0);
+    console.log("1 na bool:", bool1);
+
+    
+    let floatString = "3.14";
+    let parsedFloat = parseFloat(floatString);
+    let parsedInt = parseInt(floatString);
+    console.log("parseFloat:", parsedFloat);
+    console.log("parseInt:", parsedInt);
+  </script>
+</body>
+</html>
