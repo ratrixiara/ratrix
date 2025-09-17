@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>petle i warunkowe</title>
+    
+</head>
+<body>
+
+<header>
+    <h1>petle i warunki javascript</h1>
+</header>
+
+<div class="container">
+    <h2>1. instrukcje warunkowe</h2>
+    
+    
+    <h3>przykład jeden: <code>if</code></h3>
+    <pre>
+let a = 8;
+if (a > 5) {
+    console.log("a jest większe niż 5");
+}
+    </pre>
+    <button class="btn" onclick="demoIf()">zipie?</button>
+    <p id="wynik-if"></p>
+
+    <h3>przykład dwa: <code>if / else</code></h3>
+    <pre>
+let b = 3;
+if (b >= 10) {
+    console.log("b >= 10");
+} else {
+    console.log("b < 10");
+}
+    </pre>
+    <button class="btn" onclick="demoElse()">zipie?</button>
+    <p id="wynik-else"></p>
+
+    <h3>przykład 3: <code>else if</code></h3>
+    <pre>
+let c = 6;
+if (c > 10) {
+    console.log("Większe niż 10");
+} else if (c > 5) {
+    console.log("Większe niż 5");
+} else {
+    console.log("5 lub mniej");
+}
+    </pre>
+    <button class="btn" onclick="demoElseIf()">zipie?</button>
+    <p id="wynik-elseif"></p>
+
+    <hr>
+
+    <h2>2. petle</h2>
+    
+
+    <h3>petla <code>for</code></h3>
+    <pre>
+for (let i = 0; i < 5; i++) {
+    console.log("i =", i);
+}
+    </pre>
+    <button class="btn" onclick="petlaFor()">zipie?</button>
+    <p id="wynik-for"></p>
+
+    <h3>petla <code>while</code></h3>
+    <pre>
+let j = 0;
+while (j < 3) {
+    console.log("j =", j);
+    j++;
+}
+    </pre>
+    <button class="btn" onclick="petlaWhile()">zipie?</button>
+    <p id="wynik-while"></p>
+
+    <h3>petla <code>forEach</code> (dla tablic)</h3>
+    <pre>
+let cos = ["jeden", "dwa", "trzy"];
+let tekst = "";
+cos.forEach(function(costam) {
+    tekst += cos + "\n";
+});
+document.getElementById("wynik-foreach").innerText = tekst;
+});
+    </pre>
+    <button class="btn" onclick="petlaForEach()">zipie?</button>
+    <p id="wynik-foreach"></p>
+</div>
+
+<script>
+    function demoIf() {
+        let a = 8;
+        const wynik = a > 5 ? "a jest większe niż 5" : "a NIE jest większe niż 5";
+        document.getElementById("wynik-if").innerText = wynik;
+    }
+
+    function demoElse() {
+        let b = 3;
+        let wynik = "";
+        if (b >= 10) {
+            wynik = "b >= 10";
+        } else {
+            wynik = "b < 10";
+        }
+        document.getElementById("wynik-else").innerText = wynik;
+    }
+
+    function demoElseIf() {
+        let c = 6;
+        let wynik = "";
+        if (c > 10) {
+            wynik = "Większe niż 10";
+        } else if (c > 5) {
+            wynik = "Większe niż 5";
+        } else {
+            wynik = "5 lub mniej";
+        }
+        document.getElementById("wynik-elseif").innerText = wynik;
+    }
+
+    function petlaFor() {
+        let tekst = "";
+        for (let i = 0; i < 5; i++) {
+            tekst += "i = " + i + "\n";
+        }
+        document.getElementById("wynik-for").innerText = tekst;
+    }
+
+    function petlaWhile() {
+        let tekst = "";
+        let j = 0;
+        while (j < 3) {
+            tekst += "j = " + j + "\n";
+            j++;
+        }
+        document.getElementById("wynik-while").innerText = tekst;
+    }
+
+    function petlaForEach() {
+        let cos = ["jeden", "dwa", "trzy"];
+        let tekst = "";
+        cos.forEach(function(costam) {
+            tekst += cos + "\n";
+        });
+        document.getElementById("wynik-foreach").innerText = tekst;
+    }
+</script>
+
+</body>
+</html>
