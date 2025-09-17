@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>operatory w JS</title>
+</head>
+<body>
+
+    <h1>TU SIE W KODZIE NAJWIECEJ DZIEJE</h1>
+
+    <h2>1. przypisania</h2>
+    <p id="przypisanie"></p>
+    <script>
+        let xw = 5;
+        let yw = 3;
+        xw = yw;
+        document.getElementById('przypisanie').innerHTML = 'x = ' + xw;
+    </script>
+
+    <h2>2. arytmetyczne</h2>
+    <p id="dodawanie"></p>
+    <script>
+        let a = 10;
+        let b = 4;
+        let sum = a + b;
+        document.getElementById('dodawanie').innerHTML = '10 + 4 = ' + sum;
+    </script>
+    
+    <p id="mnozenie"></p>
+    <script>
+        let result = a * b;
+        document.getElementById('mnozenie').innerHTML = '10 * 4 = ' + result;
+    </script>
+
+    <h2>3. porownania</h2>
+    <p id="rownosc"></p>
+    <script>
+        let c = 5;
+        let d = 5;
+        let isEqual = (c == d);
+        document.getElementById('rownosc').innerHTML = '5 == 5: ' + isEqual;
+    </script>
+
+    <p id="nierownosc"></p>
+    <script>
+        let isNotEqual = (c != d);
+        document.getElementById('nierownosc').innerHTML = '5 != 5: ' + isNotEqual;
+    </script>
+
+    <h2>4. logiczne</h2>
+    <p id="and"></p>
+    <script>
+        let x = true;
+        let y = false;
+        let andResult = x && y;
+        document.getElementById('and').innerHTML = 'true && false: ' + andResult;
+    </script>
+
+    <p id="or"></p>
+    <script>
+        let orResult = x || y;
+        document.getElementById('or').innerHTML = 'true || false: ' + orResult;
+    </script>
+
+    <h2>5. inkrementacji i dekrementacji</h2>
+    <p id="inkrementacja"></p>
+    <script>
+        let num = 5;
+        num++;
+        document.getElementById('inkrementacja').innerHTML = 'num++: ' + num; 
+    </script>
+
+    <p id="dekrementacja"></p>
+    <script>
+        num--;
+        document.getElementById('dekrementacja').innerHTML = 'num--: ' + num; 
+    </script>
+
+    <h2>warunkowy ternary</h2>
+    <p id="warunkowy"></p>
+    <script>
+        let age = 18;
+        let status = (age >= 18) ? 'pełnoletni' : 'niepełnoletni';
+        document.getElementById('warunkowy').innerHTML = 'status: ' + status; 
+    </script>
+
+    <h2>7. typow typeof</h2>
+    <p id="typeof"></p>
+    <script>
+        let name = 'Jan';
+        let type = typeof name;
+        document.getElementById('typeof').innerHTML = 'typeof name: ' + type;
+    </script>
+
+    <h2>8. rozrzutu</h2>
+    <p id="spread"></p>
+    <script>
+        let arr1 = [1, 2, 3];
+        let arr2 = [...arr1, 4, 5];
+        document.getElementById('spread').innerHTML = 'arr2: [' + arr2.join(', ') + ']';
+    </script>
+
+    <h2>9. destrukturyzacji</h2>
+    <p id="destrukturyzacja"></p>
+    <script>
+        let person = { namew: 'Jan', agew: 30 };
+        let { namew, agew } = person;
+        document.getElementById('destrukturyzacja').innerHTML = 'name: ' + namew + ', age: ' + agew; 
+    </script>
+
+   
+</body>
+</html>
