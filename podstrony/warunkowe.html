@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>petle i warunkowe</title>
-    
 </head>
 <body>
 
@@ -14,7 +13,6 @@
 
 <div class="container">
     <h2>1. instrukcje warunkowe</h2>
-    
     
     <h3>przykład jeden: <code>if</code></h3>
     <pre>
@@ -52,11 +50,30 @@ if (c > 10) {
     <button class="btn" onclick="demoElseIf()">zipie?</button>
     <p id="wynik-elseif"></p>
 
+    <h3>przykład 4: <code>switch</code></h3>
+    <pre>
+let d = 2;
+switch (d) {
+    case 1:
+        console.log("d jest równe 1");
+        break;
+    case 2:
+        console.log("d jest równe 2");
+        break;
+    case 3:
+        console.log("d jest równe 3");
+        break;
+    default:
+        console.log("d ma inną wartość");
+}
+    </pre>
+    <button class="btn" onclick="demoSwitch()">zipie?</button>
+    <p id="wynik-switch"></p>
+
     <hr>
 
     <h2>2. petle</h2>
     
-
     <h3>petla <code>for</code></h3>
     <pre>
 for (let i = 0; i < 5; i++) {
@@ -66,16 +83,16 @@ for (let i = 0; i < 5; i++) {
     <button class="btn" onclick="petlaFor()">zipie?</button>
     <p id="wynik-for"></p>
 
-    <h3>petla <code>while</code></h3>
+    <h3>petla <code>do...while</code></h3>
     <pre>
 let j = 0;
-while (j < 3) {
+do {
     console.log("j =", j);
     j++;
-}
-    </pre>
-    <button class="btn" onclick="petlaWhile()">zipie?</button>
-    <p id="wynik-while"></p>
+} while (j < 3);
+</pre>
+    <button class="btn" onclick="petlaDoWhile()">zipie?</button>
+    <p id="wynik-dowhile"></p>
 
     <h3>petla <code>forEach</code> (dla tablic)</h3>
     <pre>
@@ -122,6 +139,25 @@ document.getElementById("wynik-foreach").innerText = tekst;
         document.getElementById("wynik-elseif").innerText = wynik;
     }
 
+    function demoSwitch() {
+        let d = 2;
+        let wynik = "";
+        switch (d) {
+            case 1:
+                wynik = "d jest równe 1";
+                break;
+            case 2:
+                wynik = "d jest równe 2";
+                break;
+            case 3:
+                wynik = "d jest równe 3";
+                break;
+            default:
+                wynik = "d ma inną wartość";
+        }
+        document.getElementById("wynik-switch").innerText = wynik;
+    }
+
     function petlaFor() {
         let tekst = "";
         for (let i = 0; i < 5; i++) {
@@ -130,14 +166,14 @@ document.getElementById("wynik-foreach").innerText = tekst;
         document.getElementById("wynik-for").innerText = tekst;
     }
 
-    function petlaWhile() {
+    function petlaDoWhile() {
         let tekst = "";
         let j = 0;
-        while (j < 3) {
+        do {
             tekst += "j = " + j + "\n";
             j++;
-        }
-        document.getElementById("wynik-while").innerText = tekst;
+        } while (j < 3);
+        document.getElementById("wynik-dowhile").innerText = tekst;
     }
 
     function petlaForEach() {
