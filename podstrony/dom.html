@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>dom</title>
+<style>
+  .box{padding:6px;margin:4px;background:#eee}
+  .slider{width:200px;border:1px solid #000;padding:6px}
+  .slider-slide{display:none}
+  .is-active{display:block}
+</style>
+</head>
+<body>
+
+<button id="add">dodaj</button>
+<button id="remove">usun</button>
+<div id="container" class="box">kontener</div>
+
+<hr>
+
+<div id="mySlider" class="slider">
+  <div class="slider-slide is-active">jeden</div>
+  <div class="slider-slide">dwa</div>
+  <div class="slider-slide">trzy</div>
+</div>
+
+<script>
+let c = 0;
+const cnt = document.querySelector("#container");
+
+add.onclick = () => {
+  const el = document.createElement("div");
+  el.textContent = "El " + ++c;
+  cnt.append(el);
+};
+remove.onclick = () => cnt.lastChild?.remove();
+
+class Slider {
+  constructor(q) {
+    this.s = document.querySelector(q);
+    this.slides = [...this.s.querySelectorAll(".slider-slide")];
+    this.i = Math.max(0, this.slides.findIndex(e=>e.classList.contains("is-active")));
+    this.btn();
+    this.set(this.i);
+  }
+  btn(){
+    ["<",">"].forEach((t,d)=>{
+      const b=document.createElement("button");
+      b.textContent=t;
+      b.onclick=()=>this.move(d?1:-1);
+      this.s.append(b);
+    });
+  }
+  move(d){
+    this.i=(this.i+d+this.slides.length)%this.slides.length;
+    this.set(this.i);
+  }
+  set(i){
+    this.slides.forEach(s=>s.classList.remove("is-active"));
+    this.slides[i].classList.add("is-active");
+  }
+}
+new Slider("#mySlider");
+</script>
+
+</body>
+</html>
+
