@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<table id="t">
+    
+</table>
+
+<script>
+//array wyników
+let a=[];
+
+for(let i=1;i<=10;i++){
+//array dla kazdego i
+  a[i]=[];
+  //dla kazdego j mnozenie przez i
+  for(let j=1;j<=10;j++) a[i][j]=i*j;
+}
+
+//elementy tablicy
+let t="";
+
+//petla generujaca 10 wierszy \/
+for(let i=1;i<=10;i++){
+  t+="<tr>";
+    //generowanie komorki z wynikiem dla kazdego wiersza
+  for(let j=1;j<=10;j++) t+="<td>"+a[i][j]+"</td>";
+  t+="</tr>";
+}
+//"renderowanie" gotowej tabliczki
+document.getElementById("t").innerHTML=t;
+</script>
+</body>
+</html>
