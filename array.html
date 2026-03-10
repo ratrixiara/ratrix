@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>aaaaa</title>
+</head>
+<body>
+
+<p id="array"></p>
+
+<input id="value">
+
+<button onclick="xd1()">dodaj</button>
+<button onclick="xd2()">usun</button>
+<button onclick="xd3()">dodaj na poczatek</button>
+
+<script>
+
+let arr = ["a", "b", "c"]
+
+function xd() {
+  document.getElementById("array").textContent = arr
+}
+
+function xd1() {
+  let v = document.getElementById("value").value
+  arr.push(v)
+  xd()
+}
+
+function xd2() {
+  arr.pop()
+  xd()
+}
+
+function xd3() {
+  let v = document.getElementById("value").value
+  arr.unshift(v)
+  xd()
+}
+
+xd()
+
+</script>
+
+</body>
+</html>
