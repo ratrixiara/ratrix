@@ -5,7 +5,7 @@ function lalala() {
 
     aaa += 1
 
-    if (aaa > 3){ 
+    if (aaa > 4){ 
         aaa = 1
     }
 
@@ -42,5 +42,6 @@ function lalala() {
             a3.style.display = "none"
 
             a4.style.display = "block"
+            break
     }
 }
