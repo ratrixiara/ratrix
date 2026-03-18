@@ -20,7 +20,7 @@ function lalala() {
         //trch spaghetti ale nie wazne  
         case 1:
 
-            a3.style.display = "none"
+            a4.style.display = "none"
 
             a1.style.display = "block"
             break
