@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="username">
+    <input type="password" id="pswd">
+    <input type="button" onclick="login()" value="tak">
+    <script>
+
+        let users = [
+        {
+            user: 'prac309',
+            psswd: '123'
+        }
+        ]
+
+        function login() {
+            let username = document.getElementById("username").value
+            let password = document.getElementById("pswd").value
+
+           
+            if (users.some(n => n.user === username)){
+                console.log("znaleziono ziuta")
+                const username1 = users.find(({ user }) => user === username).user
+                const password1 = users.find(({ user }) => user === username).psswd
+                
+                if (username1 == username && password1 == password){
+                    console.log("ZALOGOWANO")
+                }
+                else{
+                    console.log("ZŁE HASŁO :(")
+                }
+            }
+
+            else{
+                index = users.length
+                users.push({user:username, psswd:password})
+                console.log(users[index])
+            }
+        }
+        
+    </script>
+</body>
+</html>
